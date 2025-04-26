@@ -9,48 +9,108 @@
 
 <nav id="navbar">
   <a href="#intro">Intro</a>
-  <a href="#treemap">Treemap</a>
+  <a href="#treemap">Reddit Comments</a>
   <a href="#globalwarming">Global Warming</a>
   <a href="#worldyears">World & Years</a>
   <a href="#conclusion">Conclusion</a>
+  <a href="methodology.html">Methodology</a>
 </nav>
 
 <div class="spacer"></div>
 
-<section id="intro" class="section-light">
-  <h1 class="fade-in">🌍 Are We Getting Hotter?</h1>
-  <p class="fade-in">Climate change isn’t just a scientific issue —</p>
-  <p class="fade-in">it’s a profoundly social one.</p>
-  <p class="fade-in">Across online platforms, millions of people express their concerns and hopes.</p>
-  <div class="hint fade-in">⬇️ Scroll to explore...</div>
+<section id="intro" class="section-light" data-nav="light">
+  <h1 class="fade-in" >🌍 What Reddit Comments Reveal About Climate Conversations</h1>
+  <p class="fade-in" style="color: rgb(182, 134, 38); font-size: 1.5em;">Climate change isn’t just a scientific issue — it’s a profoundly social one. </p>
+  <p class="fade-in">Across online platforms, millions of people are expressing their thoughts, concerns, and debates on the topic. But what exactly are people talking about when they talk about climate?
+  <p class="fade-in">To explore this, we analyzed <strong><em>over 100,000 Reddit comments</em></strong> using a frequency-based and sentiment-aware approach, uncovering both the major topics of conversation and the emotions behind them.</p>
 </section>
 
-<section id="treemap" class="section-green">
-  <h2 class="fade-in">🧠 Treemap of Climate Topics & Sentiment</h2>
-  <p class="fade-in">We explore what people are actually saying about climate change.</p>
-  <iframe src="https://zihang-github-io.onrender.com/" class="fade-in"></iframe>
-  <div class="hint fade-in">🖱️ Hover to explore sentiment!</div>
+<section id="treemap" class="section-green" data-nav="green" style="height:auto;">
+  <h2 class="fade-in">🔍 First Look: What Are People Talking About?</h2>
+  <p class="fade-in">Our starting point was an interactive treemap designed to organize Reddit climate conversations into a two-level hierarchy:</p>
+  <p class="fade-in">The outer layer represents five major topics: <span style="color: rgb(182, 134, 38); font-weight: bold; font-style: italic;">Climate Change, Global Warming, Bernie, Energy, and World.</span></p>
+  <p class="fade-in">The inner layer displays the top 10 most frequent words associated with each topic.</p>
+  <br>
+  <p class="fade-in" style="margin-bottom: 0;"> Each word block’s size shows how often it appears, while the color can be adjusted by three metrics:</p>
+    <ul class="bullet-list fade-in">
+        <li>Count (frequency)</li>
+        <li>Avg Sentiment Score (emotional positivity/negativity)</li>
+        <li>Avg Comment Score (community approval)</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <div class="hint fade-in">(Note: Visualization may load slowly — please be patient.)</div>
+  <iframe src="https://zihang-github-io.onrender.com/" class="fade-in" height="1000px"></iframe>
+  <div class="hint fade-in">
+    <a href="methodology.html#method-treemap" style="color: inherit;">Methodology for this visualization </a>
+  </div>
+
+  <h3 class="fade-in">🔍 Key insight from the treemap:</h3>
+  <p class="fade-in">Terms like <strong> carbon, years, world, and energy </strong> appeared frequently across discussions, reflecting strong focus on emissions, long-term change, and resource topics.</p>
+  <p class="fade-in">Meanwhile, emotional analysis revealed that discussions around <strong>"global" and "warming" </strong>tend toward more negative sentiment, while broader terms like<strong> "world" and "years" </strong>earn higher Reddit approval.</p>
+  <br>
+  <h3 class="fade-in">🔍 From Overview to Deeper Insights</h3>
+    <p class="fade-in">Guided by the treemap findings, we focused next on two important directions for deeper exploration:</p>
 </section>
 
-<section id="globalwarming" class="section-warm">
-  <h2 class="fade-in">🌡️ Global Warming — Are We Getting Hotter?</h2>
-  <p class="fade-in">Tracking global temperature anomalies reveals alarming trends over decades.</p>
-  <iframe src="https://si649-visualization1.onrender.com/" class="fade-in"></iframe>
-  <div class="hint fade-in">🌎 Notice the temperature shifts!</div>
+
+<section id="globalwarming" class="section-warm" data-nav="warm" style="height:auto;">
+  <h2 class="fade-in">🌡️ Part1: Global Warming — Are We Getting Hotter?</h2>
+  <p class="fade-in">Given the central role of <span style="color: rgb(182, 134, 38); font-weight: bold; font-style: italic;">"global warming"</span> in discussions — and its strongly negative emotional tone — we turned from conversation to climate data itself.</p>
+  <br>
+<p class="fade-in">The following map visualizes global temperature anomalies over time — showing how Earth’s surface temperature has shifted across the decades.</p>
+  <br>
+  <div class="hint fade-in">(Note: Visualization may load slowly — please be patient.)</div>
+<iframe src="https://si649-visualization1.onrender.com/" class="fade-in" height="900px"></iframe>
+<div class="hint fade-in">
+    <a href="methodology.html#method-globalwarming" style="color: inherit;">Methodology for this visualization </a>
+  </div>
+  <br>
+    <h3 class="fade-in" style="margin-bottom: 0;">🔍 Key Observation:</h3>
+    <ul class="bullet-list fade-in">
+        <li>Warming trends are especially pronounced in the northern latitudes.</li>
+        <li>Temperature anomalies have steadily increased, especially in recent decades.</li>
+        <li>Public discourse about “global warming” aligns with observable environmental changes.</li>
+    </ul>
+    <br>
+    <p class="fade-in">This shows how public concerns are rooted not just in social discussion with no evidence, but in measurable scientific reality.</p>
 </section>
 
-<section id="worldyears" class="section-blue">
-  <h2 class="fade-in">🏭 "World" and "Years" — Tracking the Timeline</h2>
-  <p class="fade-in">Linking world discussions with evolving temperature data over time.</p>
-  <iframe src="https://visualization3.onrender.com/" class="fade-in"></iframe>
-  <div class="hint fade-in">📈 Track changes over time.</div>
+<section id="worldyears" class="section-blue" data-nav="blue" style="height:auto;">
+  <h2 class="fade-in">📈 Part 2: “World” and “Years” — Tracking the Timeline of Change</h2>
+  <p class="fade-in">The treemap also revealed frequent mentions of <span style="color: rgb(182, 134, 38); font-weight: bold; font-style: italic;">"world" and "years"</span>, suggesting a focus on global, long-term dimensions of climate change.</p>
+
+  <p class="fade-in">To explore this further, we visualize monthly temperature distributions for different countries over more than a century.</p>
+  <br>
+  <div class="hint fade-in">(Note: Visualization may load slowly — please be patient.)</div>
+  <iframe src="https://visualization3.onrender.com/" class="fade-in" height="750px"></iframe>
+    <div class="hint fade-in">
+        <a href="methodology.html#method-worldyears" style="color: inherit;">Methodology for this visualization </a>
+    </div>
+    <br>
+    <h3 class="fade-in" style="margin-bottom: 0;">🔍 Key Findings:</h3>
+    <ul class="bullet-list fade-in">
+        <li>Clear seasonal and yearly variations in temperature patterns across countries.</li>
+        <li>Public conversation about "years" and "world" mirrors real-world data showing long-term climate shifts.</li>
+        <li>People's concerns about timeframes are scientifically validated.</li>
+    </ul>
+    <br>
+    <p class="fade-in">Through this lens, we see how online conversations reflect not only emotion, but a deep engagement with actual climate timelines
+
+    </p>
+
 </section>
 
-<section id="conclusion" class="section-light">
-  <h2 class="fade-in">📢 Conclusion</h2>
-  <p class="fade-in">By linking discourse and reality, we uncover the urgent need for collective action against climate change.</p>
-  <div class="hint fade-in">🙏 Thanks for exploring with us!</div>
+<section id="conclusion" class="section-light" data-nav="light">
+  <h2 class="fade-in">Conclusion</h2>
+  <p class="fade-in">Starting with a broad exploration of Reddit climate conversations, we traced the public's focus into two specific areas — global warming and long-term world change — and validated these concerns with scientific data.</p>
+  <p class="fade-in">This approach reveals a powerful intersection between public discourse and real-world environmental shifts.</p>
+  <p class="fade-in">The public’s focus on "global warming" matches rising temperature anomalies worldwide. Discussions about "world" and "years" mirror the timeline of global climate change.</p>
+  <p class="fade-in">Understanding these connections is crucial. As the climate crisis intensifies, our ability to combine data storytelling with scientific evidence may be key to informing, persuading, and inspiring action.
+    </p>
 </section>
+
 
 <script src="script.js"></script>
 

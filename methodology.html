@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Methodology</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <nav id="navbar">
+        <a href="index.html#intro">Intro</a>
+        <a href="index.html#treemap">Reddit Comments</a>
+        <a href="index.html#globalwarming">Global Warming</a>
+        <a href="index.html#worldyears">World & Years</a>
+        <a href="index.html#conclusion">Conclusion</a>
+        <a href="methodology.html">Methodology</a>
+      </nav>
+
+<section id="methodology" class="section-light">
+    <h2 class="fade-in">📚 Methodology</h2>
+  
+    <div class="method-section fade-in" id="method-treemap">
+      <h3>Treemap of Climate Topics & Sentiment</h3>
+      <p style="text-align: start;">This interactive treemap visualizes the structure of climate-related discussions on Reddit, organized into two hierarchical levels. The outer layer displays five major topics ("Climate Change," "Global Warming," "Bernie," "Energy," and "World"), while the inner layer shows the top 10 most frequent words associated with each topic. The size of each word block is proportional to its frequency — that is, how often the word appears in comments related to the corresponding topic — and this layout remains fixed throughout user interaction.
+    </p>
+    <p style="text-align: start;">Users can explore different aspects of the conversation by selecting among three available color filters: "Count," "Avg Sentiment Score," and "Avg Comment Score." When "Count" is selected, the treemap colors each word block based on how frequently the word appears, with higher frequencies shown in deeper shades. Switching to "Avg Sentiment Score" recolors the blocks according to the average emotional tone (ranging from negative to positive sentiment) of comments mentioning the word. Selecting "Avg Comment Score" shades the treemap based on the average Reddit upvote score for comments containing that word, offering insight into community approval. Importantly, changing the filter only updates the color encoding — the size and structure of the treemap remain constant — ensuring users can consistently compare different aspects of the discussion landscape without losing spatial context.</p>
+    <p style="text-align: start;">Furthermore, the treemap provides an interactive exploration of real Reddit content: when a user clicks on a specific word block, the system randomly selects five comments containing that word and displays them, with the chosen word highlighted in yellow. This feature allows users not only to see overall patterns but also to directly examine how individual words are used in actual conversations.</p>
+    <p class="hint">Caption: You can explore the full interactive version at <a href="https://zihang-github-io.onrender.com" style="color: inherit;"> https://zihang-github-io.onrender.com </a> (Note: the site may load slowly — please be patient.)</p>
+    <a href="index.html#treemap" class="go-back" style="color: inherit;">⬅️ Go Back to Treemap Section</a>
+    </div>
+  
+    <div class="method-section fade-in" id="method-globalwarming">
+      <h3>Global Warming Temperature Map</h3>
+      <p></p>
+      <a href="index.html#globalwarming" class="go-back">⬅️ Go Back to Global Warming Section</a>
+    </div>
+  
+    <div class="method-section fade-in" id="method-worldyears">
+      <h3>World & Years: Temperature Trend Analysis</h3>
+      <p></p>
+      <a href="index.html#worldyears" class="go-back">⬅️ Go Back to World & Years Section</a>
+    </div>
+  
+  </section>
+<script src="script.js"></script> <!-- 共用你的script.js -->
+</body>
+</html>

@@ -38,3 +38,18 @@ const sectionObserver = new IntersectionObserver(function(entries) {
 sections.forEach(section => {
   sectionObserver.observe(section);
 });
+
+const navbar = document.getElementById('navbar');
+
+const colorObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navbar.className = ''; // 先清空之前的class
+      navbar.classList.add(entry.target.dataset.nav); // 添加新的class
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('section').forEach(section => {
+  colorObserver.observe(section);
+});

@@ -1,8 +1,12 @@
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f8f9fa;
+    background-image: url('Header-SF-QAClimateChange-JD.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     scroll-behavior: smooth;
   }
   
@@ -10,11 +14,12 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.6); 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 10;
     display: flex;
     justify-content: center;
+    backdrop-filter: blur(10px); 
   }
   
   nav a {
@@ -26,54 +31,134 @@ body {
   }
   
   nav a.active {
-    color: #007bff;
+    color: #46c08d;
   }
   
   .spacer {
-    height: 70px; /* 给固定导航栏留白 */
+    height: 70px; 
   }
   
   section {
     min-height: 100vh;
     padding: 150px 20px 100px;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); 
     transition: background-color 1s;
   }
   
-  /* 每章不同的背景色 */
-  .section-light { background: #f8f9fa; }
-  .section-green { background: #e0f7e9; }
-  .section-warm  { background: #fff4e6; }
-  .section-blue  { background: #e6f0ff; }
+
+  .section-light {
+    background-color: rgba(255, 255, 255, 0.8); 
+  }
   
+  .section-green {
+    background-color: rgba(224, 247, 233, 0.8); 
+  }
+  
+  .section-warm {
+    background-color: rgba(255, 244, 230, 0.8); 
+  }
+  
+  .section-blue {
+    background-color: rgba(230, 240, 255, 0.8); 
+  }
+  #intro {
+    margin-top: -70px;
+    padding-top: 220px;
+    background-color: rgba(255, 255, 255, 0.8); 
+  }
   h1, h2 {
     margin-bottom: 20px;
   }
+  h1 {
+    font-size: 2.5em;
+    color: #685445;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  h2 {
+    font-size: 2em;
+    color: #685445;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  h3{
+    font-size: 1.5em;
+    color: #51443a;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
   
-  /* 淡入动画初始状态 */
+    p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+  
+
   .fade-in {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease-out, transform 1s ease-out;
   }
   
-  /* 滚动出现后的状态 */
+
   .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
   }
   
-  /* iframe统一样式 */
+
   iframe {
     width: 90%;
-    height: 600px;
+    /* height: 600px; */
     border: none;
     margin: 30px auto;
   }
   
-  /* 小提示文字 */
+
   .hint {
     font-style: italic;
+    color: #555;
     margin-top: 20px;
     opacity: 0.7;
+  }
+
+  nav.light {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+  }
+  
+  nav.green {
+    background: rgba(224, 247, 233, 0.8);
+    backdrop-filter: blur(10px);
+  }
+  
+  nav.warm {
+    background: rgba(255, 244, 230, 0.8);
+    backdrop-filter: blur(10px);
+  }
+  
+  nav.blue {
+    background: rgba(230, 240, 255, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  ul.bullet-list {
+    list-style-position: inside;  
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+    text-align: left;
+  }
+  
+  ul.bullet-list li {
+    margin-bottom: 15px; 
+    transform: translateY(25px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  ul.bullet-list li.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
