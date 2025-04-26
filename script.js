@@ -33,7 +33,7 @@ const sectionObserver = new IntersectionObserver(function(entries) {
       if (activeLink) activeLink.classList.add('active');
     }
   });
-}, { threshold: 0.6 });
+}, { threshold: 0.3 });
 
 sections.forEach(section => {
   sectionObserver.observe(section);
