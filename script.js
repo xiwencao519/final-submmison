@@ -1,4 +1,3 @@
-// 控制文字、图片滚动出现
 const faders = document.querySelectorAll('.fade-in');
 
 const appearOptions = {
@@ -21,7 +20,6 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-// 导航栏scroll spy效果
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav a');
 
@@ -44,8 +42,8 @@ const navbar = document.getElementById('navbar');
 const colorObserver = new IntersectionObserver(function(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      navbar.className = ''; // 先清空之前的class
-      navbar.classList.add(entry.target.dataset.nav); // 添加新的class
+      navbar.className = ''; 
+      navbar.classList.add(entry.target.dataset.nav); 
     }
   });
 }, { threshold: 0.5 });
