@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Methodology</title>
-  <link rel="stylesheet" href="style.css"> 
+    <meta charset="UTF-8">
+    <title>Methodology</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <nav id="navbar">
@@ -14,34 +16,121 @@
         <a href="index.html#worldyears">World & Years</a>
         <a href="index.html#conclusion">Conclusion</a>
         <a href="methodology.html" style="color:#46c08d">Methodology</a>
-      </nav>
+    </nav>
 
-<section id="methodology" class="section-light">
-    <h2 class="fade-in">📚 Methodology</h2>
-  
-    <div class="method-section fade-in" id="method-treemap">
-      <h3>Treemap of Climate Topics & Sentiment</h3>
-      <p style="text-align: start;">This interactive treemap visualizes the structure of climate-related discussions on Reddit, organized into two hierarchical levels. The outer layer displays five major topics ("Climate Change," "Global Warming," "Bernie," "Energy," and "World"), while the inner layer shows the top 10 most frequent words associated with each topic. The size of each word block is proportional to its frequency — that is, how often the word appears in comments related to the corresponding topic — and this layout remains fixed throughout user interaction.
-    </p>
-    <p style="text-align: start;">Users can explore different aspects of the conversation by selecting among three available color filters: "Count," "Avg Sentiment Score," and "Avg Comment Score." When "Count" is selected, the treemap colors each word block based on how frequently the word appears, with higher frequencies shown in deeper shades. Switching to "Avg Sentiment Score" recolors the blocks according to the average emotional tone (ranging from negative to positive sentiment) of comments mentioning the word. Selecting "Avg Comment Score" shades the treemap based on the average Reddit upvote score for comments containing that word, offering insight into community approval. Importantly, changing the filter only updates the color encoding — the size and structure of the treemap remain constant — ensuring users can consistently compare different aspects of the discussion landscape without losing spatial context.</p>
-    <p style="text-align: start;">Furthermore, the treemap provides an interactive exploration of real Reddit content: when a user clicks on a specific word block, the system randomly selects five comments containing that word and displays them, with the chosen word highlighted in yellow. This feature allows users not only to see overall patterns but also to directly examine how individual words are used in actual conversations.</p>
-    <p class="hint">Caption: You can explore the full interactive version at <a href="https://zihang-github-io.onrender.com" style="color: inherit;"> https://zihang-github-io.onrender.com </a> (Note: the site may load slowly — please be patient.)</p>
-    <a href="index.html#treemap" class="go-back" style="color: inherit;">⬅️ Go Back to Treemap Section</a>
-    </div>
-  
-    <div class="method-section fade-in" id="method-globalwarming">
-      <h3>Global Warming Temperature Map</h3>
-      <p></p>
-      <a href="index.html#globalwarming" class="go-back">⬅️ Go Back to Global Warming Section</a>
-    </div>
-  
-    <div class="method-section fade-in" id="method-worldyears">
-      <h3>World & Years: Temperature Trend Analysis</h3>
-      <p></p>
-      <a href="index.html#worldyears" class="go-back">⬅️ Go Back to World & Years Section</a>
-    </div>
-  
-  </section>
-<script src="script.js"></script> <!-- 共用你的script.js -->
+    <section id="methodology" class="section-light">
+        <h2 class="fade-in">📚 Methodology</h2>
+
+        <div class="method-section fade-in" id="method-treemap">
+            <h3>Treemap of Climate Topics & Sentiment</h3>
+            <p style="text-align: start;">The original dataset was downloaded from <a
+                    href="https://www.kaggle.com/datasets/pavellexyr/the-reddit-climate-change-dataset"
+                    style="color: inherit;"> Kaggle </a>, and this dataset contained millions of records, making it
+                impractical to process fully. Therefore, we randomly extracted 100,000 comments, ensuring a diverse and
+                representative selection for further analysis.
+            </p>
+            <p style="text-align: start;">After sampling, we performed text cleaning, which involved removing URLs,
+                special characters, HTML entities, and standard English stopwords. We then conducted a word frequency
+                analysis to identify the 20 most common words across the comments.
+            </p>
+            <img src="image/methology_1.jpg" alt="orignal design for visualization 1"
+                style="width: 100%; max-width: 800px; margin: 0 auto; display: block;">
+            <p style="text-align: start;">During this stage, we manually grouped semantically related words to create
+                clearer, more meaningful topics for analysis.</p>
+            <p style="text-align: start;">For example:
+                We combined "climate" and "change" into the single topic "Climate Change", since these terms
+                overwhelmingly co-occur and refer to the same central idea. Similarly, we combined "global" and
+                "warming" into "Global Warming" to capture a specific climate phenomenon often discussed together.
+            </p>
+            <p style="text-align: start;">From the top 20 most frequent words, we selected five major topics for deeper
+                exploration:
+                climate change, global warming, bernie, energy, and world.
+            </p>
+            <p style="text-align: start; margin-bottom: 0;">The selection process was partly subjective but guided by several criteria:
+            </p>
+            <ul class="bullet-list" style="text-align: start;">
+                <li>Words like climate, global, warming, carbon, energy, world, years clearly pointed to climate-related
+                    concepts or environmental issues.
+                </li>
+                <li>We excluded frequent but less meaningful words such as:
+                    <br>
+                    -- "people," "think," "make," "time," "need," "way," and "going", because although these are common
+                    in conversation, they were too generic to represent distinct discussion themes.
+                </li>
+                <li>Words like "bernie" were retained because they suggest discussion around climate politics and
+                    activism, especially related to Bernie Sanders.
+                </li>
+                <li>Words such as "just," "don," and "bot" were considered junk artifacts — often related to Reddit's
+                    conversational filler language or spam — and were excluded.
+                </li>
+            </ul>
+            <br>
+            <br>
+                <p style="text-align: start; margin-bottom: 0;">This curation allowed us to focus the treemap and subsequent analysis on terms that are:
+                </p>
+                <ul class="bullet-list" style="text-align: start;">
+                    <li>Both highly frequent in climate conversations,</li>
+                    <li>And widely recognizable as meaningful in public discourse about climate change.
+                    </li>
+                </ul>
+                <br>
+                <br>
+                <p style="text-align: start;">In summary, while some judgment was involved, our selections aimed to preserve the core substance of Reddit climate discussions without letting generic filler words dilute the analysis.
+                </p>
+                <br>
+                <p style="text-align: start;margin-bottom: 0;">We then designed an interactive treemap visualization with a two-level hierarchical structure:
+                </p>
+                <ul class="bullet-list" style="text-align: start;">
+                    <li>The outer layer represents the five major topics we identified.</li>
+                    <li>The inner layer displays the top 10 most frequent words associated with each topic.</li>
+                </ul>
+                <br>
+                <br>
+                <img src="image/methodology_1_2.png" alt=" design for visualization 1"
+                    style="width: 100%; max-width: 800px; margin: 0 auto; display: block;">
+                <p style="text-align: start;margin-bottom: 0;" >The size of each word block is proportional to its frequency within its topic, and this layout remains fixed across different interactions. Users can dynamically recolor the treemap by selecting among three metrics:
+                </p>
+                <ul class="bullet-list" style="text-align: start;">
+                    <li>Count: Reflects word frequency, with darker colors indicating higher counts.</li>
+                    <li>Average Sentiment Score: Recolors blocks based on the emotional tone (ranging from negative to positive) of comments mentioning the word.</li>
+                    <li>Average Comment Score: Shades blocks based on the average Reddit upvote score for comments containing that word.</li>
+                </ul>
+                <br>
+                <br>
+                <p style="text-align: start;">Changing the metric only alters the color encoding; the size and structure of the treemap remain constant, enabling easy comparison of different dimensions without losing spatial context.
+                </p>
+                <p style="text-align: start;">In addition, clicking on a specific word block reveals five randomly selected Reddit comments that include the chosen word, with the word highlighted in yellow. This allows users to directly observe how individual words are used in real conversations.
+                </p>
+                <p style="text-align: start;">Finally, due to internal storage and processing limitations on Render (the platform used to host the interactive dashboard), we further restricted the working dataset to 10,000 rows. </p>
+                <p class="hint">Caption: You can explore the full interactive version at <a
+                        href="https://zihang-github-io.onrender.com" style="color: inherit;">
+                        https://zihang-github-io.onrender.com </a> (Note: the site may load slowly — please be patient.)
+                </p>
+                <a href="index.html#treemap" class="go-back" style="color: inherit;">⬅️ Go Back to Treemap Section</a>
+        </div>
+
+        <div class="method-section fade-in" id="method-globalwarming">
+            <h3>Global Warming Temperature Map</h3>
+            <p style="text-align: start;">To visualize long-term trends in global warming, we used <a href="https://data.giss.nasa.gov/gistemp/ " style="color:inherit"> historical temperature anomaly data</a> from NASA’s GISTEMP project. Specifically, we obtained the Land-Ocean Temperature Index (LOTI) dataset with ERSSTv5 sea-surface temperatures and 1200 km spatial smoothing, provided in compressed NetCDF format.
+            </p>
+            <p style="text-align: start;"></p>
+            <p style="text-align: start;"></p>
+            <p style="text-align: start;"></p>
+            <p style="text-align: start;"></p>
+            <p style="text-align: start;"></p>
+            <p style="text-align: start;"></p>
+            <p style="text-align: start;"></p>
+            <a href="index.html#globalwarming" class="go-back">⬅️ Go Back to Global Warming Section</a>
+        </div>
+
+        <div class="method-section fade-in" id="method-worldyears">
+            <h3>World & Years: Temperature Trend Analysis</h3>
+            <p></p>
+            <a href="index.html#worldyears" class="go-back">⬅️ Go Back to World & Years Section</a>
+        </div>
+
+    </section>
+    <script src="script.js"></script> 
 </body>
+
 </html>
